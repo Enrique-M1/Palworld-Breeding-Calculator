@@ -1,8 +1,6 @@
 import mariadb  # Importing the database that holds the information.
 
-mariadb_con = mariadb.connect( # default destinations and names. You may need to change one or more of them if
-    user="root",               # you have a database already installed. (i.e AzureDataStudio using MariaDB)
-    password="",
+mariadb_con = mariadb.connect( #put your user and password for your database below here.
     host="127.0.0.1",
     port=3306,
     database="Palworld-Breeding-Info", #In your database. you WILL need to add this.
@@ -11,9 +9,7 @@ cur = mariadb_con.cursor()
 
 # Create the database
 def create_database(db_name: str):
-    mariadb_connect = mariadb.connect(
-        user="root",
-        password="",
+    mariadb_connect = mariadb.connect( #put your user and password for your database below here.
         host="127.0.0.1",
         port=3306
     )
