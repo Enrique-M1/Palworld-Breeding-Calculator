@@ -11,8 +11,6 @@ app = FastAPI(title="Palworld API")  # The server name
 
 # The information used to connect this API to the mariadb database
 mariadb_con = mariadb.connect(
-    user="root",
-    password="",
     host="127.0.0.1",
     port=3306,
     database="Palworld_Info",
