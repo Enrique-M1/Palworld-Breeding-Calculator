@@ -9,8 +9,15 @@ from pals import Pal
 # https://fastapi.tiangolo.com/
 app = FastAPI(title="Palworld API")  # The server name
 
+# Global Vars for the database connection (Change these depending on your machine.)
+# If you did not have a previous database installed already, leave them as is.
+userName = "root"
+password = ""
+
 # The information used to connect this API to the mariadb database
 mariadb_con = mariadb.connect(
+    user = userName,
+    password = password,
     host="127.0.0.1",
     port=3306,
     database="Palworld_Info",

@@ -1,6 +1,13 @@
 import mariadb  # Importing the database that holds the information.
 
+# Global Vars for the database connection (Change these depending on your machine.)
+# If you did not have a previous database installed already, leave them as is.
+userName = "root"
+password = ""
+
 mariadb_con = mariadb.connect( #put your user and password for your database below here.
+    user = userName,
+    password = password,
     host="127.0.0.1",
     port=3306,
     database="Palworld-Breeding-Info", #In your database. you WILL need to add this.
@@ -10,6 +17,8 @@ cur = mariadb_con.cursor()
 # Create the database
 def create_database(db_name: str):
     mariadb_connect = mariadb.connect( #put your user and password for your database below here.
+        user = userName,
+        password = password,
         host="127.0.0.1",
         port=3306
     )
