@@ -9,8 +9,7 @@ order or misspelled. It can also print the table of pals incase the user does no
 game. Finally, it will also automatically save the successful combinations to a separate table called "saved_combos".
 This is for the user to be able to look back at the pals they have already created. Last semester, I had a lot of
 trouble with scope, and required a lot of help with my project. This semester, I did this on my own to see if I could
-complete it. Thus, I decided to minimize my scope to a more manageable level. I plan on coming back and perfecting
-it for the future to add to my GitHub profile. (When I make one)
+complete it.
 """
 import requests
 from pals import Pal
