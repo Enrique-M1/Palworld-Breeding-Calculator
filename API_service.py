@@ -5,19 +5,19 @@ from hypercorn.asyncio import serve  # (command prompt "pip install hypercorn")
 from fastapi import FastAPI  # Must be downloaded (command prompt "pip install fastapi")
 from starlette.responses import RedirectResponse
 from pals import Pal
+from _shared.DBSettings import Settings
 
 # https://fastapi.tiangolo.com/
 app = FastAPI(title="Palworld API")  # The server name
 
-# Global Vars for the database connection (Change these depending on your machine.)
-# If you did not have a previous database installed already, leave them as is.
-userName = "root"
-password = ""
+# Environment Variables for the Palworld Breeding Calc Database (MariaDB)
+DB_USER = Settings.getDBUsename()
+DB_PASS = Settings.getDBPassword()
 
 # The information used to connect this API to the mariadb database
 mariadb_con = mariadb.connect(
-    user = userName,
-    password = password,
+    user = DB_USER,
+    password = DB_PASS,
     host="127.0.0.1",
     port=3306,
     database="Palworld_Info",
